@@ -41,3 +41,8 @@ Zones are areas where google cloud resources are deployed.
 - Reducing insider risk
 - Employee Universal Second Factor (U2F) use
 - Software development practices
+
+## Functional Structure Of Google Cloud
+Organization ---> Folder ---> Project ---> Resources
+
+
