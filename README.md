@@ -44,5 +44,18 @@ Zones are areas where google cloud resources are deployed.
 
 ## Functional Structure Of Google Cloud
 Organization ---> Folder ---> Project ---> Resources
+project can also be a direct child in organization node
+
+## IAM
+Administrators can define policies to define **WHO** can do **WHAT** on **WHICH** resources.
+Types of roles in IAM
+1. Basic - (owner, editor, viewer, billing admin) when applied to a google cloud project, they affect all resources in that project.
+2. Predefined - resouces speific roles, predefined actions
+3. Custom - least previledge model, permissons for the role needs to defined by the creator.
+
+ ## Service Account
+ accounts which do not belong to a person but a machine or service. Service account is also a resource.
+
+ 
 
 
