@@ -83,6 +83,10 @@ Types of roles in IAM
 - Zones
 - IP addresses
   - Internal, external, range
+  In google cloud each virtual machine can have two IP addresses attached - Internal & External. External IP address is optional. The external IP address can be assigned from a pool making it **ephemeral** or it can be assigned from a reserved external IP address, making it **static**
+
+External IP addresses are mapped to 
+
 - Virtual machines (VMs)
 - Routes
 - Firewall rules
