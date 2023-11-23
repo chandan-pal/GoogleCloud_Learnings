@@ -57,6 +57,12 @@ Types of roles in IAM
  ## Service Account
  accounts which do not belong to a person but a machine or service. Service account is also a resource.
 
- 
+ ## Connecting Networks to Google VPC
+ 1. IPsec VPN protocol - connecting over intenet and creating a tunnel connection using this protocol. It uses **cloud router** to make the connection dynamic.
+ 2. Direct Peering - Puts a router in the same public datacenter as a google Point of Presnce (PoP).
+ 3. Carrier Peering - gives direct access from an on-premise network through a service provider network. (Not covered by google SLA)
+ 4. Dedicated Inteconnect - Allows for one or more direct, private connections to google. Can be covered by up to 99.99% SLA
+ 5. Partner Interconnect - useful if the physical location can't reach a dedicated interconnect colocation facility.
+
 
 
