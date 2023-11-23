@@ -64,5 +64,27 @@ Types of roles in IAM
  4. Dedicated Inteconnect - Allows for one or more direct, private connections to google. Can be covered by up to 99.99% SLA
  5. Partner Interconnect - useful if the physical location can't reach a dedicated interconnect colocation facility.
 
+## VPC Objects
+- Projects : Key organizer of infra resourses in google cloud. A project contain default 15 networks that can be shared/peered.
+- Networks (Default, auto mode, custom mode) : The networks do not have IP ranges, Networks are simply construct of all individual IP addresses and services within the network. Google cloud networks are global, spanning all available regions across the world.
+  
+- Subnetworks : Inside a network, resources can be segregated with regional subnetworks.
 
+  Default VPC - A subnet is allocated for each region with non-overlapping CIDR blocks and firewall rules that allow ingress traffic for ICMP, RDP and SSH traffic from anywhere.
+
+  Auto mode network - one subnet from each region is automatically created within it. The default network is actually an auto mode network. The automatically created subnets use a set of predefined IP ranges with a /20 mask that can be expanded to /16. All of these subnets fall within the 10.128.0.0/9 CIDR block.
+
+  Custom mode network - A custom mode network does not automatically create subnets. It provides complete control over its subnets and IP ranges. The IP ranges can not overlap between subnets of same network.
+
+ 
+
+  
+- Regions : 
+- Zones
+- IP addresses
+  - Internal, external, range
+- Virtual machines (VMs)
+- Routes
+- Firewall rules
+- 
 
