@@ -44,6 +44,7 @@ Zones are areas where google cloud resources are deployed.
 
 ## Functional Structure Of Google Cloud
 Organization ---> Folder ---> Project ---> Resources
+
 project can also be a direct child in organization node
 
 ## IAM
