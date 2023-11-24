@@ -85,10 +85,29 @@ Types of roles in IAM
   - Internal, external, range
   In google cloud each virtual machine can have two IP addresses attached - Internal & External. External IP address is optional. The external IP address can be assigned from a pool making it **ephemeral** or it can be assigned from a reserved external IP address, making it **static**
 
-External IP addresses are mapped to 
+External IP addresses are mapped to internal IP addresses.
 
 - Virtual machines (VMs)
-- Routes
-- Firewall rules
+- Routes : Routes let instances in a network send traffic directly to each other.
+
+  Every network has a default route that directs packets to destinations that are outside the network.
+
+  Routes match packets by destination IP address.
+  
+- Firewall rules : These rules manange the permissions for packets to travel via the routes.
+
+  The default network has pre-configured firewall rules that allow all instances in the network to talk to each other.
+
+  Firewall rules allow bidirectional communication once a session is established.
+
+  Even if all firewall rules are deleted, there is still an implied "**Deny All**" ingress rule and an "**Allow All**" egress rule for the network.
+
+  A firewall rule is composed of following parameters :
+  1. direction
+  2. source or destination
+  3. protocol & port
+  4. action
+  5. priority
+  6. rule assignment
 - 
 
