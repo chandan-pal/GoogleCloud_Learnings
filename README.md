@@ -77,7 +77,6 @@ Types of roles in IAM
   Custom mode network - A custom mode network does not automatically create subnets. It provides complete control over its subnets and IP ranges. The IP ranges can not overlap between subnets of same network.
 
  
-
   
 - Regions : 
 - Zones
@@ -88,6 +87,21 @@ Types of roles in IAM
 External IP addresses are mapped to internal IP addresses.
 
 - Virtual machines (VMs)
+
+  Network throughput scales 2Gbps per vCPU.
+  A vCPU (core) is equal to 1 hardware hyper-thread.
+
+  Linux:SSH requires firewall rules to allow tcp:22
+  Windows:SSH requires firewall rules to allow tcp:3389
+
+  VM Lifecycle:
+  1. Provisioning
+  2. Staging
+  3. Running
+  4. Stopping
+
+  Every VM stores its metadata on a metadata server.
+  
 - Routes : Routes let instances in a network send traffic directly to each other.
 
   Every network has a default route that directs packets to destinations that are outside the network.
@@ -109,4 +123,42 @@ External IP addresses are mapped to internal IP addresses.
   4. action
   5. priority
   6. rule assignment
+ 
+## Compute Engine
+### Machine Families
+1. General Purpose : best price performance, and most flexible vCPU to memory ratios.
+   E2 - cost optimized
+   N2, N2D, N1 - Balanced price/performance
+   Tau T2D - Scale-out optimized (best performance )
+   
+3. Compute Optimized : highest performance per core. Optimized for compute heavy workloads.
+   C2 - Ultra high performance for compute-intensive workloads (e.g. gaming, Ad serving, AI/ML etc.)
+   C2D - Ultra high performance for compute-intensive workloads & largest VM sizes (e.g. gaming, High performance computing, media transcoding)
+   
+5. Memory Optimized : Ideal for higher memory to vCPU ratio.
+   M1 - upto 4TB memory (e.g. medium in-memory databases)
+   M2 - upto 12TB memory (e.g. large in-memory databases)
+   
+7. Accelerator Optimized : optimized for high performance computing workloads
+   A2 - e.g. ML training and inference, HPC, Massive Parallelized computation.
 
+Apart from these custom machine types can also be created in google cloud.
+
+### Boot Disks
+VM comes with a single root persistent disk. 
+Image is loaded first in onto root disk during first boot.
+1. Bootable : can attach a VM and boot from it
+2. Durable: cna survive VM terminate.
+
+Types of disks.
+1. Persistent disk
+   Attached to a VM through the network interface.
+   Durable storage (can survive VM terminate).
+   Bootable (can attach to a VM and boot from it)
+   Snapshots: incredible emental backups
+   Performance: scales with size
+   HDD or SDD options
+
+2. RAM disk
+   Highest performance
+   
