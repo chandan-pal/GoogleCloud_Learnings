@@ -109,5 +109,4 @@ External IP addresses are mapped to internal IP addresses.
   4. action
   5. priority
   6. rule assignment
-- 
 
