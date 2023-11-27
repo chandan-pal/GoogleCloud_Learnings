@@ -49,13 +49,24 @@ project can also be a direct child in organization node
 
 ## IAM
 Administrators can define policies to define **WHO** can do **WHAT** on **WHICH** resources.
-Types of roles in IAM
+
+IAM Members (The WHO part)
+1. Google Accounts - a developer, an administrator, or any other person who interacts with Google Cloud
+2. Service Accounts - an account that belongs to your application instead of to an individual end user
+3. Google Groups - named collection of Google accounts and service accounts. Every group has a unique email address that is associated with the group
+4. Google Workspace domains - a virtual group of all the Google accounts that have been created in an organization's Workspace account
+5. Cloud Identity domains
+
+
+Types of roles in IAM (The WHAT part)
 1. Basic - (owner, editor, viewer, billing admin) when applied to a google cloud project, they affect all resources in that project.
 2. Predefined - resouces speific roles, predefined actions
 3. Custom - least previledge model, permissons for the role needs to defined by the creator.
 
- ## Service Account
- accounts which do not belong to a person but a machine or service. Service account is also a resource.
+IAM Policy
+A policy is a collection of access statements attached to a resource. Each policy contains a set of roles and role members, with resources inheriting policies from their parent. In case of inheritance, a resource policy is a union of the resource policy and the parent resource policy. In case of conflict less restrictive parent policy will always override a more restrictive resource policy. Also, child policy cannot restrict the access granted at parent level.
+
+*Policy insights are ML-based findings about permission usage in your project, folder, or organization.
 
  ## Connecting Networks to Google VPC
  1. IPsec VPN protocol - connecting over intenet and creating a tunnel connection using this protocol. It uses **cloud router** to make the connection dynamic.
