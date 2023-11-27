@@ -172,4 +172,43 @@ Types of disks.
 
 2. RAM disk
    Highest performance
+
+## Google Storage
+### Cloud Storage
+Object storage service, it allows world-wide storage and retrieval of any amount of data at any time.
+Cloud storage is a collection of buckets in which objects can be placed.
+
+Objects are immuatable.
+
+features - 
+- customer-supplied encryption key
+- object lifecycle management
+- object versioning
+- directory synchronization (synchronizes a VM directory with a bucket)
+- object change notifications using Pub/Sub
+
+Cloud storage provides object lifecycle management policies. They specify actions to be performed on objects that meet certain rules.
+e.g. downgrade storage class on objects older than a year, delete objects created before a specific date.
+
+Cloud storage has four storage classes - 
+1. Standard - best for data that is frequently accessed. (most expensive, no minimum storage duration, no retrieval cost)
+2. Nearline - infrequently accessed data like data backup, long tail multimedia content and data archiving. (30 days min storage duration)
+3. Coldline - inifrequently accessed data that is read at most once a quarter. (90 days minimum storage duration)
+4. Archive - Data archiving, online backup, and disaster recovery. (1 year min storage duration)
+
+Each of these storage classes provide 3 location types - 
+1. multi-region (large geographic area such as United States)
+2. Dual region (specific pair of regions)
+
+Storage bucket should have a unique name globaly and cannot be nested.
+
+For most cases IAM could be sufficient for access control.
+Cloud storage also offer **ACL (Access Control List)** for finer access control.
+For even more detailed control, **signed URLs** provide a cryptographic keys that gives time-limited access to a bucket or object.
+
+**ACL**
+- a mechanism to fine grain access to whom and what level.
+- maximum numebr of ACLs for a bucket is 100
+- Each ACL can have one or more entries. Each entry has **scope** (WHO) (for example, a specific user or group of users) and **permission** (WHAT) (for example, read or write).
+   
    
