@@ -210,5 +210,16 @@ For even more detailed control, **signed URLs** provide a cryptographic keys tha
 - a mechanism to fine grain access to whom and what level.
 - maximum numebr of ACLs for a bucket is 100
 - Each ACL can have one or more entries. Each entry has **scope** (WHO) (for example, a specific user or group of users) and **permission** (WHAT) (for example, read or write).
-   
+
+### Filestore
+managed file storage service for applications that require a file system interface and a shared file system for data.
+Filestore offers native compatibility with existing enterprise applications and supports any NFSV3 compatible clients.
+
+## Cloud Database
+## Cloud SQL
+A fully managed service of either MySQL, PostgreSQL, or Microsoft SQL Server databases.
+Cloud SQL delivers high performance and scalability with up to 64 TB of storage capacity, 60,000 IOPS, and 624 GB of RAM per instance.
+
+
+
    
