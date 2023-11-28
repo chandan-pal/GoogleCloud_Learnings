@@ -251,7 +251,7 @@ It fully supports Redis protocol.
 
 
 ## Google Cloud Operation Suite
-- Monitoring
+- Monitoring : 
 - Logging
 - Error Reporting
 - Trace
