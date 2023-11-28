@@ -44,6 +44,7 @@ Zones are areas where google cloud resources are deployed.
 
 ## Functional Structure Of Google Cloud
 Organization ---> Folder ---> Project ---> Resources
+Project also accuumulate the consumption of all its resources. Each project can have its own billing and reporting.
 
 project can also be a direct child in organization node
 
@@ -216,10 +217,44 @@ managed file storage service for applications that require a file system interfa
 Filestore offers native compatibility with existing enterprise applications and supports any NFSV3 compatible clients.
 
 ## Cloud Database
-## Cloud SQL
+### Cloud SQL
 A fully managed service of either MySQL, PostgreSQL, or Microsoft SQL Server databases.
 Cloud SQL delivers high performance and scalability with up to 64 TB of storage capacity, 60,000 IOPS, and 624 GB of RAM per instance.
 
+### Cloud Spanner
+If cloud SQL does not fit a requirement because of horizontal scalability, in that case cloud spanner can be used.
 
+Cloud Spanner is built specifically to combine benefits of relational database structure with non-relational horizontal scale.
+
+It provides petabytes scale capacity and offers transactional consistency at global scale schemas, SQL and automatic synchronous replication for high availability.
+
+e.g. use case financial applications
+
+### Firestore
+highly scalable NoSQL database.
+
+fast, fully managed, serverless, cloud native, NoSQL, document databse.
+
+It supports  ACID transactions.
+
+### Cloud Bigtable
+Fully managed NoSQL databse with petabyte-scale and very low latency.
+
+It does not guarantee transactional consistency.
+
+It integrates easily with popular big data tools like Hadoop, Cloud Dataflow and Cloud Dataproc.
+
+### Memorystore
+Fully managed in-memory data store service built on scalable, secure and highly available infrastructure.
+
+It fully supports Redis protocol.
+
+
+## Google Cloud Operation Suite
+- Monitoring
+- Logging
+- Error Reporting
+- Trace
+- Profiler
 
    
