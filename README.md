@@ -283,3 +283,24 @@ It fully supports Redis protocol.
 - can work with load balancing services to distribute traffic to all instances
 - can automatically identify and recreate unhealthy instances.
    
+### Cloud CDN
+Google Cloud CDN (Content Delivery Network) uses google's globally distributed edge points of presence to cache HTTP(S) load-balanced content close to user.
+There are over 90 of these cache sites.
+
+It can help in providing faster content delivery to users.
+
+### SSL proxy load balancing
+SSL proxy is a global load balancing service for encrypted non-HTTP traffic.
+
+This load balancer terminates the SSL connections at the load balancing layer, then balances the connections across instances using the SSL or TCP protocols.
+
+### Network Load balancing
+- regional, non-proxied (all traffic is directly passed through the load balancer) load balancing service.
+- Traffic : UDP, TCP/SSL ports
+
+### Internal Load balancing
+- regional, private load balancing
+- VM instances in the same region
+- TCP/UDP traffic
+- reduced latency, simpler configuration
+- Software defined fully distributed load balancing
