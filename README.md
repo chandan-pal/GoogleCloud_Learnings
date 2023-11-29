@@ -192,6 +192,20 @@ Types of disks.
 2. RAM disk
    Highest performance
 
+## Google Kubernetes Engine
+GKE runs containerized applications in a cloud environment, as opposed to on an individual virtual machine, like Compute Engine.
+
+## App Engine
+App Engine is a fully managed PaaS offering, or platform as a service. PaaS offerings bind code to libraries that provide access to the infrastructure application needs. This means developers can just upload code and App Engine will deploy the required infrastructure.
+
+## Cloud Functions
+Cloud Functions is a lightweight, event-based, asynchronous compute solution for creating small, single-purpose functions that respond to cloud events, without the need to manage a server or a runtime environment.
+
+It executes code in response to events, like when a new file is uploaded to Cloud Storage. It’s also a completely serverless execution environment.
+
+## Cloud Run
+It’s built on Knative, an open API and runtime environment built on Kubernetes that gives you freedom to move your workloads across different environments and platforms.
+
 ## Google Storage
 ### Cloud Storage
 Object storage service, it allows world-wide storage and retrieval of any amount of data at any time.
