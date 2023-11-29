@@ -69,12 +69,30 @@ A policy is a collection of access statements attached to a resource. Each polic
 
 *Policy insights are ML-based findings about permission usage in your project, folder, or organization.
 
- ## Connecting Networks to Google VPC
+ ## Cloud VPN - Connecting Networks to Google VPC
+Cloud VPN securely connects on-premise network to google cloud VPC network through an IPsec VPN tunnel.
+
+Traffic travelling between the two networks is encrypted by one VPN gateway, then decrypted by other VPN gateway.
+For Cloud VPN, the maximum transmission unit (MTU) for on-premise VPN gateway cannot be greater than 1460 bytes, because of encryption and encapsulation of packets.
+
+### HA VPN
+- HA VPN is high availability cloud VPN. 
+- HA VPN is a regional per VPC, VPN solution.
+- It provides 99.99% service availability.
+HA VPN gateways have two interfaces, each with its own public IP address. When you create an HA VPN gateway, two public IP addresses are automatically chosen from different address pools. When HA VPN is configured with two tunnels, Cloud VPN offers a 99.99% service availability uptime.
+
+Various other ways - 
  1. IPsec VPN protocol - connecting over intenet and creating a tunnel connection using this protocol. It uses **cloud router** to make the connection dynamic.
  2. Direct Peering - Puts a router in the same public datacenter as a google Point of Presnce (PoP).
  3. Carrier Peering - gives direct access from an on-premise network through a service provider network. (Not covered by google SLA)
  4. Dedicated Inteconnect - Allows for one or more direct, private connections to google. Can be covered by up to 99.99% SLA
  5. Partner Interconnect - useful if the physical location can't reach a dedicated interconnect colocation facility.
+
+### Cloud Interconnect
+- Dedicated : direct physical connection between on-premise network and google cloud VPC network. At a supported co-location facility.
+- Shared
+
+
 
 ## VPC Objects
 - Projects : Key organizer of infra resourses in google cloud. A project contain default 15 networks that can be shared/peered.
