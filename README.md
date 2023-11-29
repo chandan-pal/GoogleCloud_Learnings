@@ -275,4 +275,11 @@ It fully supports Redis protocol.
 - Trace
 - Profiler
 
+## Load balancing and scaling
+### Managed instance group
+- collection of identical VM instances that can be controlled as a single entity using instance template.
+- All instances can be updated easily by just specifying new template in a rolling update.
+- managed instances can scale automatically to the number of instances required in the group.
+- can work with load balancing services to distribute traffic to all instances
+- can automatically identify and recreate unhealthy instances.
    
