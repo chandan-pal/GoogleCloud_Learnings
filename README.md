@@ -304,3 +304,32 @@ This load balancer terminates the SSL connections at the load balancing layer, t
 - TCP/UDP traffic
 - reduced latency, simpler configuration
 - Software defined fully distributed load balancing
+
+## Terraform
+Infrastructure as cpde (IaC)
+- Terraform is an open source tool that helps to provision google cloud resources.
+- In addition to Terraform, google cloud also supports other IaC tools such as Chef, puppet, Ansible, Packer.
+- quick provisioning and removing of infrastructure.
+- can be part of CI/CD
+- deployment complexity is managed in code
+- easy replication like for dev and test
+- HashiCorp configuration language (HCL)
+- can be used on multiple public and private clouds.
+
+## Bigquery
+- serverless, highly scalable and cost effective cloud data warehouse.
+- petabyte scale
+- super-fast queries
+
+## Dataflow
+- managed service for executing a wide variety of data processing patterns, transforming and enriching data in stream and batch modes.
+
+## Dataprep
+- intelligent data service for visually exploring, cleaning and preparing structured and unstructured data for analysis.
+- serverless, works at any scale
+- automatic schema, data types, possible joins and anomaly detection
+- integrated partner service operated by Trifacta
+
+## Dataproc
+- fully managed cloud service for running Apache spark and Apache Hadoop clusters in simpler way.
+- super fast to start, scale and shut down
