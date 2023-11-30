@@ -1,3 +1,4 @@
+
 # Google Kubernetes Engine
 ## Hypervisor
 The software layer that breaks the dependencies of an operating system on the underlying hardware and allows several virtual machines to share that hardware is called a a hypervisor.
@@ -71,4 +72,30 @@ GKE is integrated with several services:
 - Virtual Private Clouds, which provide a network infrastructure including load balancers and ingress access for your cluster.
 - Google Cloud console provides insights into GKE clusters and their resources, and a way to view, inspect, and delete resources in those clusters.
 
+### Kubernetes components
+Kubernetes cluster needs two types of virtual machines.
+1. Control Panel
+   - fleet of cooperating processes that make a kubernetes cluster work.
+   - They coordinate the entire cluster
+
+	- Kube-APIServer
+	  - accept commands that view or change the state of the cluster.
+	  - also authenticates incoming requests, determines whether they are authorized and valid, and manages admission control.
+	 - kubectl
+		  - The job of the kubectl command is to connect to the kube-APIserver and communicate with it using the Kubernetes API.
+	  - etcd
+		  - Its job is to reliably store the state of the cluster.
+		  - This includes all the cluster configuration data,along with more dynamic information such as what nodes are part of the cluster, what Pods should be running, and where they should be running.
+	- kube-scheduler
+	  -  responsible for scheduling Pods onto the nodes.
+	  -  It evaluates the requirements of each individual Pod and selects which node is most suitable. However, it doesn’t do the work of actually launching Pods on nodes
+    - Kube-controller-manager
+	  - it continuously monitors the state of a cluster through the kube-APIserver.
+	  - Whenever the current state of the cluster doesn’t match the desired state, kube-controller-manager will attempt to make changes to achieve the desired state.
+
+
+2. Nodes
+
+	- Node Controller
+	    - job is to monitor and respond when a node is offline.
 
