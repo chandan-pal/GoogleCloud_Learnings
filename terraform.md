@@ -45,8 +45,7 @@ Variables are used to parametrize the configurations.
 Once a variable is defined, there are various ways to set its values at runtime:
 - environment variables
 - CLI options
-- key or value files
-.tvars extension
+- key or value files .tfvars extension
 
 ### Outputs
 outputs.tf holds output values from resources.
