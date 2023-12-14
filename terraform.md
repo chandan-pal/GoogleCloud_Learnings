@@ -24,10 +24,12 @@ Terraform is an open source infrastructure as code (IaC) tool created by Hashico
 
 ## HashiCorp Configuration Language (HCL)
 Syntax:
+```
 <BLOCK TYPE> "<BLOCK LABEL>" "<BLOCK LABEL>" {
   # Block body
   <IDENTIFIER> = <EXPRESSION> #Argument
 }
+```
 
 ### Resources
 Resources are code blocks that define the infrastructure components.
